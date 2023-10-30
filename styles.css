@@ -1,0 +1,123 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@300;500;700&display=swap');
+
+/* Colors and fonts variables  */
+
+:root{
+    --darkCyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --primaryFont: 'Fraunces', serif;
+    --secondaryFont: 'Montserrat', sans-serif;
+}
+/* Basic css for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Cream);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--primaryFont);
+}
+/* For all images */
+img{
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    width: 600px;
+    background-color: var(--White);
+    border-radius: 10px;
+}
+.card .mobileImg{
+    display: none;
+    border-radius: 10px 10px 0 0;
+}
+.card .desktopImg{
+    border-radius: 10px 0 0 10px;
+    width: 300px;
+    height: 100%;
+    
+}
+.card .info{
+    margin: 30px;
+    flex-basis: 50%;
+}
+.card .info h6{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--darkGrayishBlue);
+}
+.card .info h2{
+    margin: 20px 0;
+    font-family: var(--secondaryFont);
+    font-weight: 700;
+    font-size: 30px;
+    
+}
+.card .info p{
+    margin-top: 20px;
+    font-weight: 300;
+    color: var(--darkGrayishBlue);
+}
+.card .info .price{
+    font-size: 25px;
+    color: var(--darkCyan);
+    
+}
+.card .info .price span{
+    font-size: 15px;
+    text-decoration: line-through;
+    color: var(--darkGrayishBlue);
+    
+}
+.info button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 70px;
+    font-weight: bold;
+    border: none;
+    background-color: var(--darkCyan);
+    color: var(--White);
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
+.info button img{
+    width: 20px;
+    height: 20px;
+}
+
+/* For Mobile */
+
+@media screen and (max-width: 420px) {
+    .card{
+        width: 345px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .card .desktopImg{
+        display: none;
+    }
+    .card .mobileImg{
+        display: block;
+    }
+    .card .info{
+        margin: 30px;
+
+    }
+}
